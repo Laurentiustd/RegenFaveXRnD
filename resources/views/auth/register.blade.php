@@ -53,6 +53,10 @@
                 <option value="male">Male</option>
                 <option value="female">Female</option>
             </select>
+            <select name="role" id="role" class="block mt-1 w-full">
+                <option value="member">Member</option>
+                <option value="admin">Admin</option>
+            </select>
         </div>
 
         <div class="flex items-center justify-end mt-4">
