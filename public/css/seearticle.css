@@ -3,21 +3,16 @@ body{
   background-color: #F8F4F2;
   margin: 0;
 }
+section{margin: 0 auto;}
 #brand{font-family: 'PT Serif Caption';}
 #loginbtn{border-color: #4A4E69;
   color: #4A4E69;
   border-width: 3px;
 }
 
-#signupbtn, #joinbtn{color: #F8F4F2;
+#signupbtn{color: #F8F4F2;
   background-color: #22223B;
 }
-
-br{display: block;
-  content: "";
-  margin-bottom: 15px;
-}
-
-#loginbtn:hover{
-  color: white;
+#artshown{border-color: #C9ADA7;
+    height: 470px;
 }
