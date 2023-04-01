@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,6 +32,7 @@ Route::get('/ban', function () {
     return view('ban');
 });
 
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -41,8 +43,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// Route::middleware('admin')->group(function (){
-
-// });
+Route::middleware('admin')->group(function (){
+    Route::get('/addArticle', [ArticleController::class, 'create']);
+    Route::post('/storeArticle', [ArticleController::class, 'store']);
+    
+});
 
 require __DIR__.'/auth.php';
