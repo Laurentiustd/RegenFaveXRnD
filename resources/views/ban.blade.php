@@ -49,11 +49,8 @@
                 </ul>
             </div>
             <div class="flex items-center">
-                <a id="loginbtn"
-                    class="hover:bg-slate-700 hover:text-rose-50 font-semibold pt-1.5 pb-2 px-9 mx-2 rounded-full">Log
-                    In</a>
-                <a id="signupbtn" href="/step1"
-                    class="hover:bg-blue-700 font-semibold pt-2 pb-2.5 px-9 mx-2 rounded-full">Sign Up</a>
+                <x-app-layout>
+            </x-app-layout>
 
             </div>
         </div>

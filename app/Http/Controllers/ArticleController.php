@@ -10,11 +10,17 @@ class ArticleController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function editSelectArticle()
     {
-        
+        $article1 = Article::all();
+        return view('editSelectArticle', compact('article1'));
     }
-
+    
+    public function deleteSelectArticle()
+    {
+        $article1 = Article::all();
+        return view('deleteSelectArticle', compact('article1'));
+    }
     /**
      * Show the form for creating a new resource.
      */
@@ -51,10 +57,9 @@ class ArticleController extends Controller
      */
     public function show()
     {
-        $article = Article::all();
-        return view('showarticle', compact('article'));
+        $article1 = Article::all();
+        return view('article', compact('article1'));
     }
-
     /**
      * Show the form for editing the specified resource.
      */

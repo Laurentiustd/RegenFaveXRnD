@@ -59,15 +59,15 @@
 
     <section class="pt-10 w-5/6 ">
         <div class="flex items-center justify-around mx-10 mb-10 text-center ">
-            <button type="button" id="addbtn"
-                class="h-18 w-80 hover:bg-blue-700 font-semibold pt-2.5 pb-2.5 px-9 mx-2 rounded-2xl">
-                <a href="/addArticle">Add Article</a></button>
-            <button type="button" id="editbtn" 
-                class="h-18 w-80 hover:bg-blue-700 font-semibold pt-2.5 pb-2.5 px-9 mx-2 rounded-2xl"><a href="/editSelectArticle">Edit
-                Article</a></button>
-            <button type="button" id="delbtn" 
-                class="h-18 w-80 hover:bg-blue-700 font-semibold pt-2.5 pb-2.5 px-9 mx-2 rounded-2xl">
-                <a href="/deleteSelectArticle">Delete Article</a></button>
+            <button type="button" id="addbtn" href=""
+                class="h-18 w-80 hover:bg-blue-700 font-semibold pt-2.5 pb-2.5 px-9 mx-2 rounded-2xl">Add
+                Article</button>
+            <button type="button" id="editbtn" href=""
+                class="h-18 w-80 hover:bg-blue-700 font-semibold pt-2.5 pb-2.5 px-9 mx-2 rounded-2xl">Edit
+                Article</button>
+            <button type="button" id="delbtn" href=""
+                class="h-18 w-80 hover:bg-blue-700 font-semibold pt-2.5 pb-2.5 px-9 mx-2 rounded-2xl">Delete
+                Article</button>
         </div>
 
 
@@ -92,6 +92,11 @@
                             <img src="{{ asset('/storage/article/images/' . $item->Image) }}" style="width: 30em; height:10em"
                             alt="thumbnail">
                             <h3 class="text-lg leading-normal mt-2 font-semibold text-black" style="width: 10em; text-align: center">{{ $item->Tittle }}</h3>
+                            <form action="/deleteArticle/{{$item->id}}" method="POST">
+                                @csrf
+                                @method('delete')
+                                <button style="font-weight: bold; text-align: center; padding: .5em 1em; border-radius: 10px;background-color: antiquewhite">Delete</button>
+                            </form>
                         </div>
                     </div>
                 @endforeach

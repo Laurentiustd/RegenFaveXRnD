@@ -24,10 +24,6 @@ Route::get('/blog', function () {
     return view('seearticle');
 });
 
-Route::get('/article', function () {
-    return view('article');
-});
-
 Route::get('/ban', function () {
     return view('ban');
 });
@@ -48,9 +44,11 @@ Route::middleware('admin')->group(function (){
     Route::get('/addArticle', [ArticleController::class, 'create']);
     Route::post('/storeArticle', [ArticleController::class, 'store']);
     
+    Route::get('/editSelectArticle', [ArticleController::class, 'editSelectArticle']);
     Route::get('/editArticle/{id}', [ArticleController::class, 'edit']);
     Route::patch('/updateArticle/{id}', [ArticleController::class, 'update']);
-
+    
+    Route::get('/deleteSelectArticle', [ArticleController::class, 'deleteSelectArticle']);
     Route::delete('/deleteArticle/{id}', [ArticleController::class, 'destroy']);
 });
 
