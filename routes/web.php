@@ -15,24 +15,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', function () {
-    return view('home');
+
+
+
+Route::get('/changeprofile', function () {
+    return view('changeprofile');
 });
 
+Route::get('/', [ArticleController::class, 'homeArticle']);
 
-Route::get('/blog', function () {
-    return view('seearticle');
+
+Route::group(['middleware' => ['auth', 'verified']], function (){
+    Route::get('/dashboard', [ArticleController::class, 'show'])->name('dashboard');
 });
-
-Route::get('/ban', function () {
-    return view('ban');
-});
-
-Route::get('/showArticle', [ArticleController::class, 'show']);
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -50,6 +45,9 @@ Route::middleware('admin')->group(function (){
     
     Route::get('/deleteSelectArticle', [ArticleController::class, 'deleteSelectArticle']);
     Route::delete('/deleteArticle/{id}', [ArticleController::class, 'destroy']);
+    Route::get('/ban', function () {
+        return view('ban');
+    });
 });
 
 require __DIR__.'/auth.php';

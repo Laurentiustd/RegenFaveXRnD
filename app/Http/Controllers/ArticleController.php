@@ -21,6 +21,12 @@ class ArticleController extends Controller
         $article1 = Article::all();
         return view('deleteSelectArticle', compact('article1'));
     }
+
+    public function homeArticle()
+    {
+        $article1 = Article::all();
+        return view('home', compact('article1'));
+    }
     /**
      * Show the form for creating a new resource.
      */
@@ -49,7 +55,7 @@ class ArticleController extends Controller
         'Content' => $request -> Content
        ]);
 
-       return redirect('/showArticle');
+       return redirect('/dashboard');
     }
 
     /**
@@ -58,7 +64,7 @@ class ArticleController extends Controller
     public function show()
     {
         $article1 = Article::all();
-        return view('article', compact('article1'));
+        return view('dashboard', compact('article1'));
     }
     /**
      * Show the form for editing the specified resource.
@@ -88,7 +94,7 @@ class ArticleController extends Controller
         'Content' => $request -> Content
        ]);
 
-       return redirect('/showArticle');
+       return redirect('/dashboard');
     }
     
 
@@ -98,6 +104,6 @@ class ArticleController extends Controller
     public function destroy($id)
     {
         Article::destroy($id);
-        return redirect('/showArticle');
+        return redirect('/dashboard');
     }
 }

@@ -1,0 +1,23 @@
+*{font-family: 'Montserrat';}
+body{
+  background-color: #F8F4F2;
+  margin: 0;
+}
+section{margin: 0 auto;}
+#brand{font-family: 'PT Serif Caption';}
+#loginbtn{border-color: #4A4E69;
+  border-width: 3px;
+}
+
+#signupbtn{color: #F8F4F2;
+  background-color: #22223B;
+}
+
+#savebtn{color: #F8F4F2;
+    background-color: #22223B;
+}
+
+#input{
+    background: #F2E9E4;
+    border-color:#22223B;
+}
