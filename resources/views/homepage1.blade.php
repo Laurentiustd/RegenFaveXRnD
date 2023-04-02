@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/homepage1.css') }}">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=PT Serif Caption' rel='stylesheet'>
-    <title>Home</title>
+    <title>Home Page 1</title>
 </head>
 <body class="w-full h-screen">
     <!-- navbar -->
@@ -38,8 +38,8 @@
                 </ul>
             </div>
             <div class="flex items-center">
-                <button type="button" id="loginbtn" class="hover:bg-slate-700 hover:text-blue-600 font-semibold pt-2 pb-2 px-9 mx-2 rounded-full ">Log In</button>
-                <button type="button" id="signupbtn" href="/step1" class="hover:bg-blue-700 font-semibold pt-2.5 pb-2.5 px-9 mx-2 rounded-full">Sign Up</button>
+                <a href="" id="loginbtn" class="hover:bg-slate-700 hover:text-rose-50 font-semibold pt-2 pb-2 px-9 mx-2 rounded-full ">Log In</a>
+                <a href="" id="signupbtn" href="/step1" class=" font-semibold pt-2.5 pb-2.5 px-9 mx-2 rounded-full">Sign Up</a>
                 
             </div>
         </div>
@@ -55,10 +55,10 @@
                 </h1>
                 
                 <div class="space-y-10">
-                    <button type="button" id="joinbtn" href="/" class="inline-flex items-center justify-center w-full px-10 py-3 mr-2 text-base font-semibold rounded-full sm:w-auto ">
+                    <a href="/" id="joinbtn"  class="inline-flex items-center justify-center w-full px-10 py-3 mr-2 text-base font-semibold rounded-full sm:w-auto ">
                         Join for Free
                         <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
+                    </a>
                     <div class="flex flex-col mt-10 mx-4 justify-center">
                         <div class="z-50 absolute"><img src="{{ asset('assets/expert/1.png') }}" alt=""></div>
                         <div class="z-40 absolute translate-x-8"><img src="{{ asset('assets/expert/2.png') }}" alt=""></div>
@@ -75,11 +75,11 @@
             </div>    
 
             <div class="flex items-center mt-12">
-                <button type="button" href="/">
+                <a href="/">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
                     </svg>
-                </button>
+                </a>
             </div>
         </div>
     </section>
