@@ -6,13 +6,12 @@ body{
 section{margin: 0 auto;}
 #brand{font-family: 'PT Serif Caption';}
 #loginbtn{border-color: #4A4E69;
-  color: #4A4E69;
   border-width: 3px;
 }
 
 #signupbtn{color: #F8F4F2;
   background-color: #22223B;
 }
-#artshown{border-color: #C9ADA7;
+#artshown{
     height: 470px;
 }
