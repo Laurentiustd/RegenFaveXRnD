@@ -32,6 +32,7 @@ Route::get('/ban', function () {
     return view('ban');
 });
 
+Route::get('/showArticle', [ArticleController::class, 'show']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -47,6 +48,10 @@ Route::middleware('admin')->group(function (){
     Route::get('/addArticle', [ArticleController::class, 'create']);
     Route::post('/storeArticle', [ArticleController::class, 'store']);
     
+    Route::get('/editArticle/{id}', [ArticleController::class, 'edit']);
+    Route::patch('/updateArticle/{id}', [ArticleController::class, 'update']);
+
+    Route::delete('/deleteArticle/{id}', [ArticleController::class, 'destroy']);
 });
 
 require __DIR__.'/auth.php';
