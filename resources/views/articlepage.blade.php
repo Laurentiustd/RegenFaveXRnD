@@ -7,8 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=PT Serif Caption' rel='stylesheet'>
-    <link rel="stylesheet" href="{{ asset('css/articlepage.css') }}">
-    <title>Document</title>
+    <link rel="stylesheet" href="{{ asset('css/homepage3.css') }}">
+    <title>Article Page</title>
 </head>
 <body>
     <nav class="py-2.5">
@@ -38,8 +38,8 @@
             </div>
             
             <div class="flex items-center">
-                <button type="button" id="loginbtn" class="hover:bg-slate-700 hover:text-blue-600 font-semibold pt-2 pb-2 px-9 mx-2 rounded-full ">Log In</button>
-                <button type="button" id="signupbtn" href="/step1" class="hover:bg-blue-700 font-semibold pt-2.5 pb-2.5 px-9 mx-2 rounded-full">Sign Up</button>
+                <a href="" id="loginbtn" class="hover:bg-slate-700 hover:text-rose-50 font-semibold pt-2 pb-2 px-9 mx-2 rounded-full ">Log In</a>
+                <a href="" id="signupbtn" class="font-semibold pt-2.5 pb-2.5 px-9 mx-2 rounded-full">Sign Up</a>
             </div>
         </div>
     </nav>
@@ -47,62 +47,77 @@
 
 
     <section class="pt-10 w-5/6 ">
-        <div class="flex items-center justify-around mx-10 mb-10 text-center ">
-            <button type="button" id="addbtn" href="" class="h-18 w-80 hover:bg-blue-700 font-semibold pt-2.5 pb-2.5 px-9 mx-2 rounded-2xl">Add Article</button>
-            <button type="button" id="editbtn" href="" class="h-18 w-80 hover:bg-blue-700 font-semibold pt-2.5 pb-2.5 px-9 mx-2 rounded-2xl">Edit Article</button>
-            <button type="button" id="delbtn" href="" class="h-18 w-80 hover:bg-blue-700 font-semibold pt-2.5 pb-2.5 px-9 mx-2 rounded-2xl">Delete Article</button>            
+        <div class="flex items-center justify-around mx-24 mb-10 text-center ">
+            <a href="" id="addbtn" class="h-18 w-80 hover:bg-yellow-900 hover:text-rose-50  font-semibold pt-2.5 pb-2.5 px-9 mx-12 rounded-2xl">Add Article</a>
+            <a href="" id="editbtn" class="h-18 w-80 hover:bg-yellow-900 hover:text-rose-50  font-semibold pt-2.5 pb-2.5 px-9 mx-12 rounded-2xl">Edit Article</a>
+            <a href="" id="delbtn" class="h-18 w-80 hover:bg-yellow-900 hover:text-rose-50  font-semibold pt-2.5 pb-2.5 px-9 mx-12 rounded-2xl">Delete Article</a>            
         </div>
 
         <div class="flex flex-col">
-            <div class="flex items-center justify-around mx-10 text-center ">
-                <div class="px-4">
-                    <div class="kolartikel py-16 px-12 mb-12  sm:w-48 lg:w-72 transform transition duration-300 ease-in-out hover:-translate-y-2 rounded-2xl">
-                        <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Article 1</h3>
-                        <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-
-                <div class="px-4">
-                    <div class="kolartikel py-16 px-12 mb-12 sm:w-48 lg:w-72 transform transition duration-300 ease-in-out hover:-translate-y-2 rounded-2xl ">
-                        <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Article 2</h3>
-                        <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
+            <div class="flex items-center justify-around mx-24 text-center ">
+                <div class="px-4" >
+                    <div class="kolartikel py-8 px-6 mb-12 sm:w-48 lg:w-72  transform transition duration-300 ease-in-out hover:-translate-y-2 rounded-2xl">
+                        <img src="{{ asset('assets/article/art1.png') }}" alt="" class="mb-4"> 
+                        <h3 class="text-lg leading-normal font-bold text-black">Title Article</h3>
+                        <p class="font-semibold">Author</p>
+                    </div> 
                 </div>
 
                 <div class="px-4" >
-                    <div class="kolartikel py-16 px-12 mb-12 sm:w-48 lg:w-72  transform transition duration-300 ease-in-out hover:-translate-y-2 rounded-2xl">
-                        <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Article 3</h3>
-                        <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
+                    <div class="kolartikel py-8 px-6 mb-12 sm:w-48 lg:w-72  transform transition duration-300 ease-in-out hover:-translate-y-2 rounded-2xl">
+                        <img src="{{ asset('assets/article/art2.png') }}" alt="" class="mb-4"> 
+                        <h3 class="text-lg leading-normal font-bold text-black">Title Article</h3>
+                        <p class="font-semibold">Author</p>
+                    </div> 
+                </div>
+
+                <div class="px-4" >
+                    <div class="kolartikel py-8 px-6 mb-12 sm:w-48 lg:w-72  transform transition duration-300 ease-in-out hover:-translate-y-2 rounded-2xl">
+                        <img src="{{ asset('assets/article/art3.png') }}" alt="" class="mb-4"> 
+                        <h3 class="text-lg leading-normal font-bold text-black">Title Article</h3>
+                        <p class="font-semibold">Author</p>
+                    </div> 
                 </div>
             </div>    
 
 
-            <div class="flex flex-col">
-            <div class="flex items-center justify-around mx-10 text-center ">
-                <div class="px-4">
-                    <div class="kolartikel py-16 px-12 mb-12 sm:w-48 lg:w-72  transform transition duration-300 ease-in-out hover:-translate-y-2 rounded-2xl">
-                        <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Article 4</h3>
-                        <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-
-                <div class="px-4">
-                    <div class="kolartikel py-16 px-12 mb-12 sm:w-48 lg:w-72   transform transition duration-300 ease-in-out hover:-translate-y-2 rounded-2xl">
-                        <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Article 5</h3>
-                        <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
+            <div class="flex items-center justify-around mx-24 text-center ">
+                <div class="px-4" >
+                    <div class="kolartikel py-8 px-6 mb-12 sm:w-48 lg:w-72  transform transition duration-300 ease-in-out hover:-translate-y-2 rounded-2xl">
+                        <img src="{{ asset('assets/article/art4.png') }}" alt="" class="mb-4"> 
+                        <h3 class="text-lg leading-normal font-bold text-black">Title Article</h3>
+                        <p class="font-semibold">Author</p>
+                    </div> 
                 </div>
 
                 <div class="px-4" >
-                    <div class="kolartikel py-16 px-12 mb-12 sm:w-48 lg:w-72  transform transition duration-300 ease-in-out hover:-translate-y-2 rounded-2xl">
-                        <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Article 6</h3>
-                        <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="kolartikel py-8 px-6 mb-12 sm:w-48 lg:w-72  transform transition duration-300 ease-in-out hover:-translate-y-2 rounded-2xl">
+                        <img src="{{ asset('assets/article/art5.png') }}" alt="" class="mb-4"> 
+                        <h3 class="text-lg leading-normal font-bold text-black">Title Article</h3>
+                        <p class="font-semibold">Author</p>
+                    </div> 
+                </div>
+
+                <div class="px-4" >
+                    <div class="kolartikel py-8 px-6 mb-12 sm:w-48 lg:w-72  transform transition duration-300 ease-in-out hover:-translate-y-2 rounded-2xl">
+                        <img src="{{ asset('assets/article/art6.png') }}" alt="" class="mb-4"> 
+                        <h3 class="text-lg leading-normal font-bold text-black">Title Article</h3>
+                        <p class="font-semibold">Author</p>
                     </div> 
                 </div>
             </div>   
         </div>
 
+
+        <div class="flex items-center justify-center mb-10 text-center ">
+            <a href="" id="slidebtn" class="h-12 w-12 hover:bg-yellow-900 hover:text-rose-50 font-semibold text-xl rounded-full mx-2 flex items-center justify-center"><</a>
+            <a href="" id="slidebtn" class="h-12 w-12 hover:bg-yellow-900 hover:text-rose-50  font-semibold text-xl rounded-full mx-2 flex items-center justify-center">1</a>
+            <a href="" id="slidebtn" class="h-12 w-12 hover:bg-yellow-900 hover:text-rose-50  font-semibold text-xl rounded-full mx-2 flex items-center justify-center">2</a>
+            <a href="" id="slidebtn" class="h-12 w-12 hover:bg-yellow-900 hover:text-rose-50  font-semibold text-xl rounded-full mx-2 flex items-center justify-center">3</a>
+            <a href="" id="slidebtn" class="h-12 w-12 hover:bg-yellow-900 hover:text-rose-50  font-semibold text-xl rounded-full mx-2 flex items-center justify-center">4</a>
+            <a href="" id="slidebtn" class="h-12 w-12 hover:bg-yellow-900 hover:text-rose-50  font-semibold text-xl rounded-full mx-2 flex items-center justify-center">5</a>
+            <a href="" id="slidebtn" class="h-12 w-12 hover:bg-yellow-900 hover:text-rose-50  font-semibold text-xl rounded-full mx-2 flex items-center justify-center">></a>
+        </div>
     </section>
 </body>
 </html>
