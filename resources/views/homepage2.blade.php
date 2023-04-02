@@ -7,8 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=PT Serif Caption' rel='stylesheet'>
-    <link rel="stylesheet" href="{{ asset('css/seearticle.css') }}">
-    <title>Document</title>
+    <link rel="stylesheet" href="{{ asset('css/homepage2.css') }}">
+    <title>Article Page</title>
 </head>
 <body class="w-full h-screen">
     <nav class="py-2.5">
@@ -37,8 +37,8 @@
                 </ul>
             </div>
             <div class="flex items-center">
-                <button type="button" id="loginbtn" class="hover:bg-slate-700 hover:text-blue-600 font-semibold pt-2 pb-2 px-9 mx-2 rounded-full ">Log In</button>
-                <button type="button" id="signupbtn" href="/step1" class="hover:bg-blue-700 font-semibold pt-2.5 pb-2.5 px-9 mx-2 rounded-full">Sign Up</button>
+                <a href="" id="loginbtn" class="hover:bg-slate-700 hover:text-rose-50 font-semibold pt-2 pb-2 px-9 mx-2 rounded-full ">Log In</a>
+                <a href="" id="signupbtn" class=" font-semibold pt-2.5 pb-2.5 px-9 mx-2 rounded-full">Sign Up</a>
                 
             </div>
         </div>
@@ -46,15 +46,15 @@
     </nav>
 
     <section class="pt-10 w-2/3 ">
-        <div class="border-2 rounded-2xl" id="artshown">
-
+        <div class="flex justify-center items-center">
+            <img src="{{ asset('assets/article/seeart.png') }}" alt="" class="border-2 rounded-2xl"  id="artshown">
         </div>
 
         <div class="flex mt-10 justify-center items-center">
-            <button type="button" id="signupbtn" href="/step1" class="inline-flex  hover:bg-blue-700 font-semibold pt-2.5 pb-2.5 px-9 mx-2 rounded-full">
+            <a href="" id="signupbtn" class="inline-flex font-semibold pt-2.5 pb-2.5 px-9 mx-2 rounded-full">
                 See More Article
                 <svg aria-hidden="true" class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </button>        
+            </a>        
         </div>
     </section>
 
