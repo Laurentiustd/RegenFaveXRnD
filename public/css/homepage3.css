@@ -6,7 +6,6 @@ body{
 section{margin: 0 auto;}
 #brand{font-family: 'PT Serif Caption';}
 #loginbtn{border-color: #4A4E69;
-  color: #4A4E69;
   border-width: 3px;
 }
 
@@ -14,8 +13,9 @@ section{margin: 0 auto;}
   background-color: #22223B;
 }
 
-#addbtn,#editbtn,#delbtn{color: #22223B;
-    background-color: #C9ADA7;
+#addbtn,#editbtn,#delbtn, #slidebtn{
+  border-width: 2px;
+  border-color: #C9ADA7;
 }
 
 .kolartikel{background-color: #F2E9E4;}
