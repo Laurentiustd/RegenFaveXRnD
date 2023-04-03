@@ -50,7 +50,10 @@
             <h1 class="font-bold text-4xl mb-3">Register</h1>
             <h6 class="font-medium text-lg mb-6">Sign Up and Start Learning</h6>
         </div>
-        <form class="grid grid-cols-2 gap-6 mt-8 py-12 px-4 rounded-3xl" id="form">
+
+        <div class="z-30 absolute w-3/5 h-96 mt-8 py-52 px-4 rounded-3xl translate-y-0.5 translate-x-1" id="back"></div>
+
+        <form class="z-40 absolute w-3/5 grid grid-cols-2 gap-6 mt-8 py-12 px-4 rounded-3xl" id="form">
             <div class="mx-10">
                 <label class="mx-1 mb-2 font-semibold">First Name *</label>
                 <input type="text" id="input" class="w-full px-5 py-2 mt-2 mb-4 placeholder-gray-500 bg-white rounded-md border focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
@@ -83,12 +86,13 @@
 
         </form>
 
-        <div class="flex flex-row items-start justify-between mt-8 mx-4">
-            <a href="" id="backlogin" class="font-medium text-sm" >< Back To Login</p>
-            <a href="" class="font-medium text-sm" >Next Step ></a> 
+        <div class="z-50 absolute w-3/5 flex flex-row items-start justify-between mt-20 translate-y-96">
+            <a href="" id="backlogin" class="font-medium text-sm ml-5" >< Back To Login</p>
+            <a href="" class="font-medium text-sm mr-5" >Next Step ></a> 
         </div>
-       
-        
+
+
     </section>
+
 </body>
 </html>
