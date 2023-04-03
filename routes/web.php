@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,6 +49,8 @@ Route::middleware('admin')->group(function (){
     Route::get('/ban', function () {
         return view('ban');
     });
+
+    Route::patch('/updateProfile/{id}', [RegisteredUserController::class, 'update']);
 });
 
 require __DIR__.'/auth.php';

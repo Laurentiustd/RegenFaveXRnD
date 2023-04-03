@@ -54,4 +54,16 @@ class RegisteredUserController extends Controller
 
         return redirect(RouteServiceProvider::HOME);
     }
+
+    public function update(Request $request, $id){
+        User::where('id', $id)->update([
+            'username' => $request->username,
+            'city' => $request->city,
+            'birthdate'=>$request->birthdate,
+            'number'=>$request->number,
+            'gender'=>$request->gender,
+        ]);
+
+        return redirect('/dashboard');
+    }
 }
