@@ -46,10 +46,13 @@ Route::middleware('admin')->group(function (){
     
     Route::get('/deleteSelectArticle', [ArticleController::class, 'deleteSelectArticle']);
     Route::delete('/deleteArticle/{id}', [ArticleController::class, 'destroy']);
-    Route::get('/ban', function () {
-        return view('ban');
-    });
-
+    // Route::get('/ban', function () {
+        //     return view('ban');
+        // });
+    Route::get('/ban', [ArticleController::class, 'showMember']);
+    Route::patch('/banMember/{id}', [ArticleController::class, 'banMember']);
+    Route::patch('/unbanMember/{id}', [ArticleController::class, 'unbanMember']);
+        
     Route::patch('/updateProfile/{id}', [RegisteredUserController::class, 'update']);
 });
 

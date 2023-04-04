@@ -106,16 +106,16 @@
                                 <div class="col-md-6 mb-4">
                                     <div class="form-outline">
                                         <label class="form-label" for="name" :value="__('Name')">Full Name *</label>
-                                        <input type="text" id="name" name="name" :value="old('name')" required autofocus autocomplete="name"  class="form-control " /> 
+                                        <input type="text" id="name" name="name" :value="old('name')" required autofocus autocomplete="name"  class="form-control" style="background-color: #F8F4F2"/> 
                                         <x-input-error :messages="$errors->get('name')" class="mt-2" />                                   
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-4">
                                     <div class="form-outline form">
                                         <label class="form-label" for="role">Role</label>
-                                        <select name="role" id="role" class="form-select">
+                                        <select name="role" id="role" class="form-select" style="background-color: #F8F4F2">
                                             <option selected disabled>Choose Role</option>
-                                            <option value="member">Member</option>
+                                            <option value="member" >Member</option>
                                             <option value="admin">Admin</option>
                                         </select>
                                     </div>
@@ -129,14 +129,14 @@
                                 <div class="col-md-6 mb-4">
                                     <div class="form-outline">
                                         <label class="form-label" for="email" :value="__('Email')">Email *</label>
-                                        <input type="email" id="email" name="email" :value="old('email')" required autocomplete="username"  class="form-control " placeholder="abcde@gmail.com"/>         
+                                        <input type="email" style="background-color: #F8F4F2"  id="email" name="email" :value="old('email')" required autocomplete="username"  class="form-control " placeholder="abcde@gmail.com"/>         
                                         <x-input-error :messages="$errors->get('email')" class="mt-2" />                           
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-4">
                                     <div class="form-outline">
                                         <label class="form-label" for="number">Phone Number *</label>
-                                        <input type="text" id="number" class="form-control" name="number" placeholder="+62 | "/>
+                                        <input type="text"  style="background-color: #F8F4F2" id="number" class="form-control" name="number" placeholder="+62 | "/>
                                     </div>
                                 </div>
                             </div>
@@ -148,14 +148,14 @@
                                 <div class="col-md-6 mb-4">
                                     <div class="form-outline">
                                         <label class="form-label" for="password" :value="__('Password')">Password *</label>
-                                        <input type="password" id="password" name="password" required autocomplete="new-password"  class="form-control " />                                    
+                                        <input type="password" style="background-color: #F8F4F2"  id="password" name="password" required autocomplete="new-password"  class="form-control " />                                    
                                         <x-input-error :messages="$errors->get('password')" class="mt-2" />
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-4">
                                     <div class="form-outline">
                                         <label class="form-label" for="password_confirmation" :value="__('Confirm Password')">Confirm Password *</label>
-                                        <input type="password" id="password_confirmation" name="password_confirmation" required autocomplete="new-password"  class="form-control " />
+                                        <input type="password" style="background-color: #F8F4F2"  id="password_confirmation" name="password_confirmation" required autocomplete="new-password"  class="form-control " />
                                         <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
                                     </div>
                                 </div>
@@ -167,13 +167,13 @@
                                 <div class="col-md-6 mb-4">
                                     <div class="form-outline">
                                         <label class="form-label" for="username">Username*</label>
-                                        <input type="text" id="username" name="username" class="form-control" />                                    
+                                        <input type="text"  style="background-color: #F8F4F2" id="username" name="username" class="form-control" />                                    
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-4">
                                     <div class="form-outline">
                                         <label class="form-label" for="gender">Gender</label>
-                                    <select class="form-select" id="gender" name="gender" aria-label="Gender">
+                                    <select class="form-select" style="background-color: #F8F4F2"  id="gender" name="gender" aria-label="Gender">
                                             <option selected disabled>Choose Gender</option>
                                             <option value="male">Male</option>
                                             <option value="female">Female</option>
@@ -189,13 +189,13 @@
                                     <div class="form-outline">
                                         <label class="form-label" for="form3Example1m">Date of Birth*</label>
     
-                                        <input type="date" id="birthdate" name="birthdate" class="form-control" placeholder="DD/MM/YYYY"/>                                    
+                                        <input type="date"  style="background-color: #F8F4F2" id="birthdate" name="birthdate" class="form-control" placeholder="DD/MM/YYYY"/>                                    
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-4">
                                     <div class="form-outline">
                                         <label class="form-label" for="form3Example1n">Place of Birth*</label>
-                                        <input type="text" id="city" name="city" class="form-control" />
+                                        <input type="text"  style="background-color: #F8F4F2" id="city" name="city" class="form-control" />
                                     </div>
                                 </div>
                             </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Article;
+use App\Models\User;
 
 class ArticleController extends Controller
 {
@@ -105,5 +106,25 @@ class ArticleController extends Controller
     {
         Article::destroy($id);
         return redirect('/dashboard');
+    }
+
+    public function showMember(){
+        $user = User::All();
+        return view('ban', compact('user'));
+    }
+
+    public function banMember($id){
+        User::findOrFail($id)->update([
+            'role' => 'banned'
+        ]);
+
+        return redirect('/ban');
+    }
+    public function unbanMember($id){
+        User::findOrFail($id)->update([
+            'role' => 'member'
+        ]);
+
+        return redirect('/ban');
     }
 }

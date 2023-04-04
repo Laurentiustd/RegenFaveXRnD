@@ -19,6 +19,8 @@ class AdminMiddleware
         if(Auth::check()){
             if(Auth::user()->role == 'admin' && Auth::user()->role == 'member'){
                 return redirect('/addArticle');
+            }else if(Auth::user()->role == 'banned'){
+                return redirect('/login');    
             }
         }else{
             return redirect('/register');

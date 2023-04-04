@@ -72,7 +72,7 @@
                     <th>Birthdate</th>
                     <th>Birthdate</th>
                 </tr>
-                <tr>
+                {{-- <tr>
                     <th>Lorem1</th>
                     <th>Lorem Ithsum</th>
                     <th>Lorem@gmail.com</th>
@@ -98,7 +98,39 @@
                     <th>male</th>
                     <th>Jakarta, 03-03-2003</th>
                     <th><button>Ban</button></th>
+                </tr> --}}
+                @foreach ($user as $item)  
+                @if ($item->role == 'member')
+                <tr>
+                    <form action="/banMember/{{$item->id}}" method="POST">
+                        @csrf
+                        @method('patch')
+                        <th>{{$item->username}}</th>
+                        <th>{{$item->name}}</th>
+                        <th>{{$item->email}}</th>
+                        <th>{{$item->number}}</th>
+                        <th>{{$item->gender}}</th>
+                        <th>{{$item->birthdate}}</th>
+                        <th><button>Ban</button></th>
+                    </form>
                 </tr>
+                    
+                @elseif($item->role == 'banned')
+                <tr>
+                    <form action="/unbanMember/{{$item->id}}" method="POST">
+                        @csrf
+                        @method('patch')
+                        <th>{{$item->username}}</th>
+                        <th>{{$item->name}}</th>
+                        <th>{{$item->email}}</th>
+                        <th>{{$item->number}}</th>
+                        <th>{{$item->gender}}</th>
+                        <th>{{$item->birthdate}}</th>
+                        <th><button>Unban</button></th>
+                    </form>
+                </tr>
+                @endif
+                @endforeach
             </table>
         </div>
     </div>
