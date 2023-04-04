@@ -23,6 +23,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('role');
+            $table->boolean('isAdmin')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

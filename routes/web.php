@@ -49,9 +49,9 @@ Route::middleware('admin')->group(function (){
     // Route::get('/ban', function () {
         //     return view('ban');
         // });
-    Route::get('/ban', [ArticleController::class, 'showMember']);
-    Route::patch('/banMember/{id}', [ArticleController::class, 'banMember']);
-    Route::patch('/unbanMember/{id}', [ArticleController::class, 'unbanMember']);
+    Route::get('/ban', [ArticleController::class, 'showMember'])->middleware('isAdmin');
+    Route::patch('/banMember/{id}', [ArticleController::class, 'banMember'])->middleware('isAdmin');
+    Route::patch('/unbanMember/{id}', [ArticleController::class, 'unbanMember'])->middleware('isAdmin');
         
     Route::patch('/updateProfile/{id}', [RegisteredUserController::class, 'update']);
 });
