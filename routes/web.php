@@ -19,9 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/changeprofile', function () {
-    return view('changeprofile');
-});
+Route::get('/showArticle/{id}', [ArticleController::class, 'showArticle']);
 
 Route::get('/', [ArticleController::class, 'homeArticle']);
 
@@ -36,7 +34,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::middleware('admin')->group(function (){
+Route::group(['middleware' => [ 'member', 'auth']], function (){
     Route::get('/addArticle', [ArticleController::class, 'create']);
     Route::post('/storeArticle', [ArticleController::class, 'store']);
     
@@ -46,14 +44,16 @@ Route::middleware('admin')->group(function (){
     
     Route::get('/deleteSelectArticle', [ArticleController::class, 'deleteSelectArticle']);
     Route::delete('/deleteArticle/{id}', [ArticleController::class, 'destroy']);
-    // Route::get('/ban', function () {
-        //     return view('ban');
-        // });
-    Route::get('/ban', [ArticleController::class, 'showMember'])->middleware('isAdmin');
-    Route::patch('/banMember/{id}', [ArticleController::class, 'banMember'])->middleware('isAdmin');
-    Route::patch('/unbanMember/{id}', [ArticleController::class, 'unbanMember'])->middleware('isAdmin');
-        
+    
     Route::patch('/updateProfile/{id}', [RegisteredUserController::class, 'update']);
+});
+
+Route::middleware('admin')->group(function (){
+    Route::get('/ban', [ArticleController::class, 'showMember']);
+    Route::patch('/banMember/{id}', [ArticleController::class, 'banMember']);
+    Route::patch('/unbanMember/{id}', [ArticleController::class, 'unbanMember']);
+    Route::get('/listMember', [ArticleController::class, 'listMember']);
+    
 });
 
 require __DIR__.'/auth.php';

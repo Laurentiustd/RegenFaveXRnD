@@ -3,10 +3,11 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Auth;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class isAdmin
+class MemberMiddleware
 {
     /**
      * Handle an incoming request.
@@ -15,9 +16,13 @@ class isAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(!auth()->check() || !auth()->user()->isAdmin){
-            abort(403);
+        // if(!auth()->check() || !auth()->user()->isAdmin){
+        //     abort(403);
+        // }
+            if(Auth::user()->role != 'admin' && Auth::user()->role != 'member'){
+                return redirect('/dashboard');
+            }else{
+                return $next($request);
         }
-        return $next($request);
     }
 }

@@ -134,6 +134,7 @@
         <div class="" style="text-align: center">
             <div class="grid grid-cols-3 justify-items-center">
                 @foreach ($article1 as $item)
+                <a href="/showArticle/{{$item->id}}">
                     <div class="px-4">
                         <div class="kolartikel py-16 px-12 mb-12  sm:w-48 lg:w-72 transform transition duration-300 ease-in-out hover:-translate-y-2 rounded-2xl">
                             <img src="{{ asset('/storage/article/images/' . $item->Image) }}" style="width: 30em; height:10em"
@@ -141,6 +142,7 @@
                             <h3 class="text-lg leading-normal mt-2 font-semibold text-black" style="width: 10em; text-align: center">{{ $item->Tittle }}</h3>
                         </div>
                     </div>
+                </a>
                 @endforeach
             </div>
             <div class="flex items-center justify-center mb-10 text-center ">

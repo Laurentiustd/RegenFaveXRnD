@@ -109,6 +109,7 @@ class ArticleController extends Controller
     }
 
     public function showMember(){
+        // $this->authorize('admin');
         $user = User::All();
         return view('ban', compact('user'));
     }
@@ -126,5 +127,15 @@ class ArticleController extends Controller
         ]);
 
         return redirect('/ban');
+    }
+    public function listMember(){
+        // $this->authorize('admin');
+        $user = User::All();
+        return view('listMember', compact('user'));
+    }
+
+    public function showArticle($id){
+        $article = Article::findOrFail($id);
+        return view('showArticle', compact('article'));
     }
 }
