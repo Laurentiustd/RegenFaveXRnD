@@ -38,14 +38,14 @@
                         </x-slot>
 
                         <x-slot name="content">
-                            {{-- @can('admin') --}}
+                            @can('admin')
                                 <x-dropdown-link href="/ban">
                                     {{ __('Ban Member') }}
                                 </x-dropdown-link>
                                 <x-dropdown-link href="/listMember">
                                     {{ __('List Member') }}
                                 </x-dropdown-link>
-                            {{-- @endcan --}}
+                            @endcan
                             <x-dropdown-link :href="route('profile.edit')">
                                 {{ __('Profile') }}
                             </x-dropdown-link>
