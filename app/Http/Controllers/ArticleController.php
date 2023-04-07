@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Article;
 use App\Models\User;
+use Auth;
 
 class ArticleController extends Controller
 {
@@ -44,7 +45,6 @@ class ArticleController extends Controller
     // buat ngirim artikel ke db
     public function store(Request $request)
     {
-
         $validated = $request->validate([
             'Image' => 'required|mimes:jpg,png,jpeg'
         ]);
@@ -56,6 +56,7 @@ class ArticleController extends Controller
        Article::create([
         'Tittle' => $request -> Tittle,
         'Image' => $filename,
+        'CreatedBy' => Auth::user() -> role,
         'Content' => $request -> Content
        ]);
 

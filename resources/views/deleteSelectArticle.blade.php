@@ -74,40 +74,66 @@
 
         <div class="">
             <div class="grid grid-cols-3 justify-items-center">
-                @foreach ($article1 as $item)
-                    {{-- <div style="background-color: whitesmoke; padding:3em">
-                        <h1>{{ $item->Tittle }}</h1>
-                        <img src="{{ asset('/storage/article/images/' . $item->Image) }}" style="width: 30em; height:20em"
-                            alt="thumbnail">
-                        <p>{{ $item->Content }}</p>
-                        <a href="/editArticle/{{ $item->id }}">edit</a>
-                        <form action="/deleteArticle/{{ $item->id }}" method="POST">
-                            @csrf
-                            @method('delete')
-                            <button>Delete</button>
-                        </form>
-                    </div> --}}
-                    <div class="px-4">
+                @if (Auth::user()->role == 'admin')
+
+                    @foreach ($article1 as $item)
+                        {{-- <div style="background-color: whitesmoke; padding:3em">
+                    <h1>{{ $item->Tittle }}</h1>
+                    <img src="{{ asset('/storage/article/images/' . $item->Image) }}" style="width: 30em; height:20em"
+                    alt="thumbnail">
+                    <p>{{ $item->Content }}</p>
+                    <a href="/editArticle/{{ $item->id }}">edit</a>
+                    <form action="/deleteArticle/{{ $item->id }}" method="POST">
+                        @csrf
+                        @method('delete')
+                        <button>Delete</button>
+                    </form>
+                </div> --}}
+                        <div class="px-4">
+                            <div
+                                class="kolartikel py-16 px-12 mb-12  sm:w-48 lg:w-72 transform transition duration-300 ease-in-out hover:-translate-y-2 rounded-2xl">
+                                <img src="{{ asset('/storage/article/images/' . $item->Image) }}"
+                                    style="width: 30em; height:10em" alt="thumbnail">
+                                <h3 class="text-lg leading-normal mt-2 font-semibold text-black"
+                                    style="width: 10em; text-align: center">{{ $item->Tittle }}</h3>
+                                <form action="/deleteArticle/{{ $item->id }}" method="POST">
+                                    @csrf
+                                    @method('delete')
+                                    <button
+                                        style="font-weight: bold; text-align: center; padding: .5em 1em; border-radius: 10px;background-color: antiquewhite">Delete</button>
+                                </form>
+                            </div>
+                        </div>
+                    @endforeach
+                @elseif(Auth::user()->role == 'member')
+                    @foreach ($article1 as $item)
+                        @if ($item->CreatedBy == 'member')
+                            <div class="px-4">
+                                <div
+                                    class="kolartikel py-16 px-12 mb-12  sm:w-48 lg:w-72 transform transition duration-300 ease-in-out hover:-translate-y-2 rounded-2xl">
+                                    <img src="{{ asset('/storage/article/images/' . $item->Image) }}"
+                                        style="width: 30em; height:10em" alt="thumbnail">
+                                    <h3 class="text-lg leading-normal mt-2 font-semibold text-black"
+                                        style="width: 10em; text-align: center">{{ $item->Tittle }}</h3>
+                                    <form action="/deleteArticle/{{ $item->id }}" method="POST">
+                                        @csrf
+                                        @method('delete')
+                                        <button
+                                            style="font-weight: bold; text-align: center; padding: .5em 1em; border-radius: 10px;background-color: antiquewhite">Delete</button>
+                                    </form>
+                                </div>
+                            </div>
+                        @endif
+                    @endforeach
+                @endif
+                {{-- <div class="px-4">
                         <div class="kolartikel py-16 px-12 mb-12  sm:w-48 lg:w-72 transform transition duration-300 ease-in-out hover:-translate-y-2 rounded-2xl">
-                            <img src="{{ asset('/storage/article/images/' . $item->Image) }}" style="width: 30em; height:10em"
-                            alt="thumbnail">
-                            <h3 class="text-lg leading-normal mt-2 font-semibold text-black" style="width: 10em; text-align: center">{{ $item->Tittle }}</h3>
-                            <form action="/deleteArticle/{{$item->id}}" method="POST">
-                                @csrf
-                                @method('delete')
-                                <button style="font-weight: bold; text-align: center; padding: .5em 1em; border-radius: 10px;background-color: antiquewhite">Delete</button>
-                            </form>
+                            <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Article 1</h3>
+                            <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
                     </div>
-                @endforeach
-                {{-- <div class="px-4">
-                    <div class="kolartikel py-16 px-12 mb-12  sm:w-48 lg:w-72 transform transition duration-300 ease-in-out hover:-translate-y-2 rounded-2xl">
-                        <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Article 1</h3>
-                        <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-
-                <div class="px-4">
+                    
+                    <div class="px-4">
                     <div class="kolartikel py-16 px-12 mb-12 sm:w-48 lg:w-72 transform transition duration-300 ease-in-out hover:-translate-y-2 rounded-2xl ">
                         <h3 class="text-lg leading-normal mb-2 font-semibold text-black">Article 2</h3>
                         <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
