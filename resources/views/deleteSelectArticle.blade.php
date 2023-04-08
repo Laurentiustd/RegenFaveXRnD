@@ -107,7 +107,7 @@
                     @endforeach
                 @elseif(Auth::user()->role == 'member')
                     @foreach ($article1 as $item)
-                        @if ($item->CreatedBy == 'member')
+                        @if ($item->Author == Auth::user()->name)
                             <div class="px-4">
                                 <div
                                     class="kolartikel py-16 px-12 mb-12  sm:w-48 lg:w-72 transform transition duration-300 ease-in-out hover:-translate-y-2 rounded-2xl">

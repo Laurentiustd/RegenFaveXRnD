@@ -12,6 +12,7 @@ class Article extends Model
         'Tittle',
         'Image',
         'CreatedBy',
+        'Author',
         'Content'
     ];
 }

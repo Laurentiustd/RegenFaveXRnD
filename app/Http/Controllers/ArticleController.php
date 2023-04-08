@@ -57,6 +57,7 @@ class ArticleController extends Controller
         'Tittle' => $request -> Tittle,
         'Image' => $filename,
         'CreatedBy' => Auth::user() -> role,
+        'Author'=> Auth::user()-> name,
         'Content' => $request -> Content
        ]);
 
